@@ -1,0 +1,10 @@
+import { cwd } from "node:process";
+import { join } from "node:path";
+import { rename as nodeRename } from "node:fs/promises";
+
+const rename = (pathToFile, newFileName) => {
+  const newPath = join(cwd(), newFileName);
+  nodeRename(pathToFile, newPath);
+};
+
+export default rename;
