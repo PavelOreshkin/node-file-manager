@@ -4,7 +4,7 @@ import { rename as nodeRename } from "node:fs/promises";
 
 const rename = (pathToFile, newFileName) => {
   const newPath = join(cwd(), newFileName);
-  nodeRename(pathToFile, newPath);
+  return nodeRename(pathToFile, newPath);
 };
 
 export default rename;
